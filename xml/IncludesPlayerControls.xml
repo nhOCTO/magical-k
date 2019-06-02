@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PlayerControlCommons">
+		<visible>!Window.IsVisible(SliderDialog)</visible>
 		<include>VisibleFadeEffect</include>
 		<control type="image">
 			<posx>0</posx>
@@ -31,7 +32,7 @@
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
-			<posx>220</posx>
+			<posx>300</posx>
 			<posy>10</posy>
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
@@ -40,15 +41,15 @@
 				<description>Volume Button</description>
 				<posx>0</posx>
 				<posy>10</posy>
-				<width>80</width>
-				<height>80</height>
+				<width>40</width>
+				<height>40</height>
 				<label></label>
 				<texturenofocus>osd_volume.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
 			</control>
 			<control type="group">
-				<posx>104</posx>
+				<posx>64</posx>
 				<include>VisibleFadeEffect</include>
 				<visible>!Window.IsVisible(1112)</visible>
 				<control type="label">
@@ -83,7 +84,7 @@
 				<control type="progress">
 					<description>Progressbar</description>
 					<posx>0</posx>
-					<posy>80</posy>
+					<posy>40</posy>
 					<width>552</width>
 					<height>12</height>
 					<info>Player.ProgressCache</info>
@@ -93,7 +94,7 @@
 				<control type="progress">
 					<description>Progressbar</description>
 					<posx>0</posx>
-					<posy>80</posy>
+					<posy>40</posy>
 					<width>552</width>
 					<height>12</height>
 					<info>Player.Progress</info>
@@ -104,7 +105,7 @@
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>552</width>
-					<height>64</height>
+					<height>32</height>
 					<action>seek</action>
 					<texturesliderbar></texturesliderbar>
 					<textureslidernib></textureslidernib>
@@ -113,7 +114,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>130r</posx>
+			<posx>70r</posx>
 			<posy>0</posy>
 			<control type="image">
 				<posx>0</posx>
@@ -127,8 +128,8 @@
 				<description>Close Button</description>
 				<posx>4</posx>
 				<posy>9</posy>
-				<width>120</width>
-				<height>120</height>
+				<width>60</width>
+				<height>60</height>
 				<font></font>
 				<onclick>Back</onclick>
 				<texturefocus>icon_dialog_close.png</texturefocus>
@@ -279,32 +280,32 @@
 			</control>
 		</control>
 		<control type="group">
-			<posy>130r</posy>
+			<posy>80r</posy>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>15</posy>
 				<width>ScreenWidth</width>
-				<height>100</height>
+				<height>50</height>
 				<align>center</align>
 				<orientation>horizontal</orientation>
 				<itemgap>30</itemgap>
 				<control type="button">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
 					<texturenofocus>osd_previous.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_rewind.png</texturefocus>
 					<texturenofocus>osd_rewind.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
 				<control type="togglebutton">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_pause.png</texturefocus>
 					<texturenofocus>osd_pause.png</texturenofocus>
 					<alttexturefocus colordiffuse="blue">osd_play.png</alttexturefocus>
@@ -313,36 +314,36 @@
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 					<texturenofocus>osd_stop.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_forward.png</texturefocus>
 					<texturenofocus>osd_forward.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 					<texturenofocus>osd_next.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 				<control type="togglebutton">
-					<width>100</width>
-					<height>100</height>
+					<width>50</width>
+					<height>50</height>
 					<texturefocus colordiffuse="blue">osd_record.png</texturefocus>
 					<texturenofocus>osd_record.png</texturenofocus>
 					<alttexturefocus colordiffuse="red">osd_record.png</alttexturefocus>
 					<alttexturenofocus colordiffuse="red">osd_record.png</alttexturenofocus>
 					<usealttexture>Player.Record</usealttexture>
-					<onclick>PlayerControl(Record)</onclick>
-					<visible>Player.CanRecord</visible>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<visible>PVR.CanRecordPlayingChannel</visible>
 				</control>
 			</control>
 		</control>

@@ -146,17 +146,18 @@
 				<height>120</height>
 				<onleft>9002</onleft>
 				<onright>9002</onright>
-				<onup>9001</onup>
-				<ondown>20</ondown>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
 				<pagecontrol></pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>Horizontal</orientation>
 				<itemlayout height="120" width="120">
 					<control type="image">
-						<posx>32</posx>
-						<posy>32</posy>
-						<width>56</width>
-						<height>56</height>
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -170,10 +171,11 @@
 						<texture colordiffuse="blue">roundbutton-focus.png</texture>
 					</control>
 					<control type="image">
-						<posx>32</posx>
-						<posy>32</posy>
-						<width>56</width>
-						<height>56</height>
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
@@ -214,5 +216,5 @@
 			<param name="group-posx">640r</param>
 			<param name="panel-width">630</param>
 		</include>
-	</controls>	
+	</controls>
 </window>
